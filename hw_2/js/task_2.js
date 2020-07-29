@@ -1,38 +1,26 @@
 "use strict";
+const calculateEngravingPrice = (message, pricePerWord) => {
+  return message.split(" ").length * pricePerWord;
+};
 
-const total = 100;
-let ordered = 50;
+console.log(
+  calculateEngravingPrice(
+    "Proin sociis natoque et magnis parturient montes mus",
+    10
+  )
+); // price 80
 
-if (ordered > total) {
-    console.log ("На складе недостаточно твоаров!")
-}
-else{
-    console.log ("Заказ оформлен, с вами свяжется менеджер!");
-}
+console.log(
+  calculateEngravingPrice(
+    "Proin sociis natoque et magnis parturient montes mus",
+    20
+  )
+); // price 160
 
-ordered = 20;
+console.log(
+  calculateEngravingPrice("Donec orci lectus aliquam est magnis", 40)
+); // price 240
 
-if (ordered > total) {
-    console.log ("На складе недостаточно твоаров!")
-}
-else{
-    console.log ("Заказ оформлен, с вами свяжется менеджер!");
-}
-
-ordered = 80;
-
-if (ordered > total) {
-    console.log ("На складе недостаточно твоаров!")
-}
-else{
-    console.log ("Заказ оформлен, с вами свяжется менеджер!");
-}
-
-ordered = 130;
-
-if (ordered > total) {
-    console.log ("На складе недостаточно твоаров!")
-}
-else{
-    console.log ("Заказ оформлен, с вами свяжется менеджер!");
-}
+console.log(
+  calculateEngravingPrice("Donec orci lectus aliquam est magnis", 20)
+); // price 120

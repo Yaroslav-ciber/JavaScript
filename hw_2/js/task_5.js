@@ -1,31 +1,13 @@
-let country = prompt("Enter your country").toLowerCase();
-let china = 100;
-let chili = 250;
-let australia = 170;
-let india = 80;
-let jamaica = 120;
-switch (country) {
-  case "китай":
-    console.log(`Доставка в ${country} будет стоить ${china} кредитов`);
-    break;
+const checkForSpam = (message) => {
+  return (
+    message.toLowerCase().includes("spam") ||
+    message.toLowerCase().includes("sale")
+  );
+};
+console.log(checkForSpam('Latest technology news')); // false
 
-  case "чили":
-    console.log(`Доставка в ${country} будет стоить ${chili} кредитов`);
-    break;
+console.log(checkForSpam('JavaScript weekly newsletter')); // false
 
-  case "австралия":
-    console.log(`Доставка в ${country} будет стоить ${australia} кредитов`);
-    break;
+console.log(checkForSpam('Get best sale offers now!')); // true
 
-  case "индия":
-    console.log(`Доставка в ${country} будет стоить ${india} кредитов`);
-    break;
-
-  case "ямайка":
-    console.log(`Доставка в ${country} будет стоить ${jamaica} кредитов`);
-    break;
-
-  default:
-    console.log("В вашей стране доставка не доступна");
-    break;
-}
+console.log(checkForSpam('[SPAM] How to earn fast money?')); // true

@@ -1,15 +1,23 @@
 let input;
+let numbers = [];
 let total = 0;
 
-while (true) {
-  input = prompt("Введите число!");
-
-  if (input === null) {
-    break;
+while (input !== null) {
+  input = prompt("Введіть число!");
+  while (isNaN(Number(input))) {
+    alert("Не коректний номер, спробуйте ще раз!");
+    input = prompt("Введіть число!");
   }
-
-  input = Number(input);
-  total += input;
+  numbers.push(Number(input));
 }
+numbers.pop();
 
-alert(`Общая сумма чисел равна ${total}`);
+if (numbers.length) {
+  for (let num of numbers) {
+    total += num;
+  }
+  console.log(`Загальна сума = ${total}`);
+}
+else {
+  console.log("Скасовано користувачем!");
+}

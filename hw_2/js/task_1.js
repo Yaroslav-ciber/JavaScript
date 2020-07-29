@@ -1,19 +1,19 @@
 "use strict";
-
-// // stage_1
+// stage_1
 const logItems = ["1 - Mango", "2 - Poly", "3 - Ajax"];
 for (let i = 0; i < logItems.length; i += 1) {
   console.log(i);
   console.log(logItems[i]);
 }
 
+//stage_2
 const logItems = ["1 - Mango", "2 - Poly", "3 - Ajax"];
 for (const logItem of logItems) {
   console.log(logItems);
 }
 
-// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+// stage_3
 const logItems = [""];
 for (const logItem of logItems) {
   console.log(logItems);

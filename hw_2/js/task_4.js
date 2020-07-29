@@ -1,17 +1,21 @@
-let credits = 23580;
-const pricePerDroid = 3000;
-let countDroid = prompt("Сколько дроидов готови купить?");
-if (countDroid === null) {
-  console.log("Отменено пользователем!");
-} else {
-  let totalPrice = pricePerDroid * +countDroid;
-  if (totalPrice > credits) {
-    console.log("Недостаточно средств на счету!");
-  } else {
-    credits = credits - totalPrice;
-    // credits-=totalPrice;
-    console.log(
-      `Вы купили ${countDroid} дроидов, на счету осталось ${credits} кредитов.`
-    );
+const formatString = (string) => {
+  if (string.length > 40) {
+    string = string.slice(0, 40) + "...";
   }
-}
+  return string;
+};
+console.log(formatString("Curabitur ligula sapien, tincidunt non."));
+// оригінальна строка
+
+console.log(formatString("Vestibulum facilisis, purus nec pulvinar iaculis."));
+// форматована строка
+
+console.log(formatString("Curabitur ligula sapien."));
+// оригінальна строка
+
+console.log(
+  formatString(
+    "Nunc sed turpis. Curabitur a felis in nunc fringilla tristique."
+  )
+);
+// форматована строка
