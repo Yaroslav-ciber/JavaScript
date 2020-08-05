@@ -2,7 +2,7 @@ const findBestEmployee = (employees) => {
   const keys = Object.keys(employees);
   let max = keys[0];
   for (const key of keys) {
-    if (employees[key] > employees[max]) max = key;
+    if (employees[key] > employees[max]) {max = key};
   }
   return max;
 };
